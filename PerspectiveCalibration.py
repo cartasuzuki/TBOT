@@ -31,33 +31,37 @@ def CalibrateCameraPerspective():
 
     total_points_used=10
 
-    X_center=10.9
-    Y_center=10.7
-    Z_center=43.4
+    X_center=17.5
+    Y_center=13.5
+    Z_center=37
+    
+
     worldPoints=np.array([[X_center,Y_center,Z_center],
-                        [5.5,3.9,46.8],
-                        [14.2,3.9,47.0],
-                        [22.8,3.9,47.4],
-                        [5.5,10.6,44.2],
-                        [14.2,10.6,43.8],
-                        [22.8,10.6,44.8],
-                        [5.5,17.3,43],
-                        [14.2,17.3,42.5],
-                        [22.8,17.3,44.4]], dtype=np.float32)
+                       [5.5,3.5,40.0],
+                       [14.5,3.5,38.0],
+                       [23.5,3.5,40.0],
+                       [5.5,10.5,38.5],
+                       [14.5,10.5,37.5],
+                       [23.5,10.5,37.5],
+                       [5.5,17.5,40],
+                       [14.5,17.5,37.5],
+                       [23.5,17.5,37.5]], dtype=np.float32)
 
     #MANUALLY INPUT THE DETECTED IMAGE COORDINATES HERE
 
     #[u,v] center + 9 Image points
     imagePoints=np.array([[cx,cy],
-                        [502,185],
-                        [700,197],
-                        [894,208],
-                        [491,331],
-                        [695,342],
-                        [896,353],
-                        [478,487],
-                        [691,497],
-                        [900,508]], dtype=np.float32)
+                       [85,70],
+                       [270,70],
+                       [430,70],
+                       [85,200],
+                       [270,200],
+                       [430,200],
+                       [85,328],
+                       [270,328],
+                       [430,328]], dtype=np.float32)
+
+
 
     #FOR REAL WORLD POINTS, CALCULATE Z from d*
 

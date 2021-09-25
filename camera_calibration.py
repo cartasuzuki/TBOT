@@ -17,18 +17,9 @@ def CalibrateCamera():
     # prepare object points, like (0,0,0), (1,0,0), (2,0,0) ....,(6,5,0)
     objp = np.zeros((7*7,3), np.float32)
 
-    #add 2.5 to account for 2.5 cm per square in grid
-    objp[:,:2] = np.mgrid[0:7,0:7].T.reshape(-1,2)*2.5
-
-    # Arrays to store object points and image points from all the images.
-    objpoints = [] # 3d point in real world space
-    imgpoints = [] # 2d points in image plane.
-
-    images = glob.glob(calibrationImgPattern)
-
-    win_name="Verify"
-    cv2.namedWindow(win_name, cv2.WND_PROP_FULLSCREEN)
-    cv2.setWindowProperty(win_name,cv2.WND_PROP_FULLSCREEN,cv2.WINDOW_FULLSCREEN)
+    #add 2.5 to account for 2.
+#d* is the distance from your point to the camera lens. (d* = Z for the camera center)
+#we will calculate Z in tname,cv2.WND_PROP_FULLSCREEN,cv2.WINDOW_FULLSCREEN)
 
     print("getting images")
     for fname in images:

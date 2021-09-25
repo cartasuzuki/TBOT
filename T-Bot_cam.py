@@ -70,7 +70,7 @@ class TBotCam:
 
 cam = TBotCam
 cam.LoadFromFile(cam)
-xyz = cam.calculate_XYZ(cam,300, 300)
+xyz = cam.calculate_XYZ(cam,85, 328)
 
 print("Resulting XYZ")
 print(xyz)
